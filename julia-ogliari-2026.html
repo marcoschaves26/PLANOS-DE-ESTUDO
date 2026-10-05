@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta name="robots" content="noindex,nofollow"><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="pt-BR"><head><meta name="robots" content="noindex,nofollow"><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Julia Ogliari 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,6 +145,18 @@ ol.plan li strong{color:var(--ink); font-weight:600}
 .mini .n{font-variant-numeric:tabular-nums; color:var(--ink); font-weight:600; white-space:nowrap; text-align:right}
 .mini .sims{display:block; font-size:11.5px; color:var(--ink-3); font-family:"IBM Plex Mono",monospace}
 
+/* cronograma de semanas */
+.semgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); gap:14px; align-items:start}
+.sem .foco{padding:12px 14px; border-bottom:1px solid var(--hair); font-size:13.5px; color:var(--ink-2); line-height:1.45}
+.sem .foco b{color:var(--ink); font-weight:600}
+.sem ul{margin:0; padding:12px 14px 12px 15px; list-style:none; display:flex; flex-direction:column; gap:9px}
+.sem li{font-size:13.5px; color:var(--ink-2); line-height:1.45; padding-left:16px; position:relative}
+.sem li::before{content:""; position:absolute; left:0; top:8px; width:5px; height:5px; border-radius:50%; background:var(--accent)}
+.sem li b{color:var(--ink); font-weight:600}
+.sem .chk{padding:11px 14px; border-top:1px solid var(--hair); background:var(--surface-2); font-size:12.5px; color:var(--ink-2); line-height:1.45}
+.sem .chk b{color:var(--ink); font-weight:600; display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); margin-bottom:3px}
+.aviso{display:block; font-size:12px; color:var(--critical); font-weight:600; margin-top:3px}
+
 /* agenda semanal */
 .agenda{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; align-items:start}
 .day{background:var(--surface); border:1px solid var(--rule); border-radius:10px; box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column}
@@ -186,14 +198,29 @@ ol.plan li strong{color:var(--ink); font-weight:600}
 .f-ok{color:var(--good); border-color:color-mix(in srgb,var(--good) 40%,transparent)}
 footer{margin-top:52px; padding-top:20px; border-top:1px solid var(--rule); font-size:13px; color:var(--ink-3)}
 footer p{margin:0 0 8px; max-width:80ch}
+/* logo */
+.mhrow{display:flex; gap:28px; align-items:flex-start; justify-content:space-between}
+.mhrow .mh{min-width:0; flex:1 1 auto}
+.logo{flex:none; width:clamp(118px,15vw,172px); height:auto; margin-top:6px; display:block}
+@media (max-width:620px){
+  .mhrow{flex-direction:column-reverse; gap:14px}
+  .logo{width:128px; margin-top:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo{filter:invert(1)} }
+:root[data-theme="dark"] .logo{filter:invert(1)}
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
 </style>
 
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Curso Loghus &middot; Unidade Barra &middot; Dossiê individual</p>
+    <div class="mhrow">
+      <div class="mh">
+    <p class="eyebrow">Unidade Barra &middot; Dossiê individual</p>
     <h1>Julia Ogliari Balthazar</h1>
     <p class="sub">Desempenho nas quatro áreas ao longo dos simulados de 2026, item a item, cruzado com a ficha de conteúdos, competências e habilidades de cada prova.</p>
+      </div>
+      <img class="logo" src="data:image/png;base64,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" alt="Curso Loghus" width="420" height="101">
+    </div>
     <div class="factbar">
       <div class="fact">Simulados<b>9 em cada dia</b></div>
       <div class="fact">Itens respondidos<b>1.620</b></div>
@@ -257,17 +284,18 @@ footer p{margin:0 0 8px; max-width:80ch}
 
   <section id="rotina">
     <div class="sechead"><h2>A semana da Julia</h2><span class="note">os quatro planos encaixados na grade da Turma Medicina 2026</span></div>
-    <p class="lede">Os planos por área, somados, não cabem numa semana. Esta é a versão que cabe: cada gap dela foi colocado no horário em que a escola já oferece ajuda para aquele conteúdo. Aulas aparecem em cinza só para dar o contexto do dia; o que ela precisa decidir está nos blocos marcados.</p>
+    <p class="lede">Os planos por área, somados, não cabem numa semana. Esta é a versão que cabe: cada gap dela foi colocado no horário em que a escola já oferece ajuda para aquele conteúdo. Aulas aparecem em cinza só para dar o contexto do dia; o que ela precisa decidir está nos blocos marcados. Sábado fica inteiro reservado ao simulado.</p>
     <div class="carga">
-      <span class="c">Plantões prioritários <b>10 h</b></span>
-      <span class="c">Estudo dirigido no contraturno <b>8 h 30</b></span>
-      <span class="c">Fim de semana <b>3 h 30</b></span>
-      <span class="c">Plantões que ela pode pular <b>HIST e BIO alternados</b></span>
+      <span class="c">Plantões da grade <b>10 h</b></span>
+      <span class="c">Dúvidas dentro da aula <b>sem custo de horário</b></span>
+      <span class="c">Estudo dirigido sozinha <b>8 h 15</b></span>
+      <span class="c">Domingo <b>2 h</b></span>
+      <span class="c">Sábado <b>simulado</b></span>
     </div>
 
     <div class="ins hot" style="margin-bottom:20px">
       <h3>O achado que organiza a semana inteira</h3>
-      <p>Os dois maiores buracos dela — <strong>literatura</strong> (16 erros em 41 itens de H16) e <strong>sociologia</strong> (17 erros entre clássicos e indústria cultural) — são justamente as duas matérias <strong>sem plantão de dúvidas na grade</strong>. Tudo o mais que ela erra tem monitoria disponível: Física na segunda, Geografia e Matemática na quarta, Química na quinta, Biologia na sexta. Então a regra é simples: <strong>o que tem plantão, ela resolve no plantão; o contraturno fica reservado para literatura e sociologia</strong>, que só avançam com estudo dirigido e conversa direta com a Amanda e a Larissa no fim da aula.</p>
+      <p>Os dois maiores buracos dela — <strong>literatura</strong> (16 erros em 41 itens de H16) e <strong>sociologia</strong> (17 erros entre clássicos e indústria cultural) — são justamente as duas matérias <strong>sem plantão próprio na grade</strong>. Todo o resto que ela erra tem monitoria: Física na segunda, Geografia e Matemática na quarta, Química na quinta, Biologia na sexta. As duas que faltam ganharam solução sem ocupar horário novo: a <strong>sociologia se resolve dentro da própria aula de terça</strong>, na janela em que a turma copia a matéria e a Larissa fica livre para atender, e a <strong>literatura entra no plantão de Redação de quinta</strong>, que também recebe dúvidas de Linguagens. Nenhum gap dela fica sem um professor na frente — e a tarde de terça, que seria gasta tirando dúvida, passa a ser usada resolvendo questão.</p>
     </div>
 
     <div class="agenda">
@@ -278,18 +306,18 @@ footer p{margin:0 0 8px; max-width:80ch}
           <span class="do">O maior gap de Natureza dela. Chegar com <strong>lista pronta</strong>: os três itens de óptica do 10º simulado (q105, q107, q130), a q116 de ondas e a q126 de estática dos fluidos — mais eletrodinâmica, que são 12 erros no ano. Não é hora de tirar dúvida genérica: é hora de refazer item errado com o monitor ao lado.</span></span></div>
         <div class="slot aula"><span class="hr">14:00<br>15:30</span><span><span class="ti">FÍS 2 · Kalleb</span></span></div>
         <div class="slot aula"><span class="hr">16:00<br>17:30</span><span><span class="ti">QUÍ 2 · Palha</span></span></div>
-        <div class="slot estudo"><span class="hr">17:30<br>20:00</span><span><span class="ti">Estudo · Literatura<span class="badge b-estudo">sem plantão</span></span>
-          <span class="do">Duas escolas literárias por semana, sempre com texto na mão — <strong>1h de leitura e análise, 1h de itens, 30 min de ficha</strong>. É o bloco que mais vale pontos em Linguagens e o único lugar da semana onde ele cabe inteiro.</span></span></div>
+        <div class="slot estudo"><span class="hr">17:30<br>20:00</span><span><span class="ti">Estudo · Literatura</span>
+          <span class="do">Duas escolas literárias por semana, sempre com texto na mão — <strong>1h de leitura e análise, 1h de itens, 30 min de ficha</strong>. É o bloco que mais vale pontos em Linguagens. O que ficar de dúvida aqui vai para o plantão de quinta.</span></span></div>
       </div>
 
       <div class="day">
         <h3>Terça <span>Humanas e Linguagens</span></h3>
-        <div class="slot aula"><span class="hr">08:00<br>09:30</span><span><span class="ti">FIL/SOC · Larissa</span>
-          <span class="do">Sair da aula com <strong>duas perguntas feitas à Larissa</strong> sobre Durkheim, Weber ou Marx. Não há plantão de Sociologia; esses cinco minutos no fim da aula são a monitoria dela.</span></span></div>
+        <div class="slot plantao"><span class="hr">08:00<br>09:30</span><span><span class="ti">FIL/SOC · Larissa <em style="font-style:normal;color:var(--ink-3)">— dúvidas na aula</em><span class="badge b-plantao">prioridade 2</span></span>
+          <span class="do">Não existe plantão de Sociologia na grade, mas existe uma janela: <strong>enquanto a turma copia a matéria, a Larissa fica livre para atender</strong>. É nela que entram <strong>Durkheim, Weber e Marx</strong> — 8 erros no ano só nos clássicos, com os seis alunos do grupo errando os mesmos itens. Chegar com as questões já separadas e perguntar o que cada autor diria sobre aquele enunciado, que é exatamente o que o item cobra. Sobrando janela, <strong>indústria cultural</strong> (9 erros) e <strong>filosofia política</strong> (5).</span></span></div>
         <div class="slot aula"><span class="hr">10:00<br>11:30</span><span><span class="ti">MAT 2 · Artur</span></span></div>
         <div class="slot aula"><span class="hr">13:30<br>15:30</span><span><span class="ti">RED · Rita</span></span></div>
-        <div class="slot estudo"><span class="hr">16:00<br>17:45</span><span><span class="ti">Estudo · Sociologia e Filosofia<span class="badge b-estudo">sem plantão</span></span>
-          <span class="do">Conteúdo quente da aula da manhã. Clássicos da sociologia e indústria cultural primeiro; filosofia política depois. <strong>Leitura + 10 itens comentados</strong>, justificando por que cada distrator está errado.</span></span></div>
+        <div class="slot estudo"><span class="hr">16:00<br>17:45</span><span><span class="ti">Estudo · Itens de Sociologia e Filosofia</span>
+          <span class="do">O outro lado da dúvida tirada de manhã: agora é <strong>fazer questão</strong>, com o conteúdo ainda quente. Bateria de 10 a 12 itens de clássicos da sociologia e indústria cultural, justificando por escrito por que cada distrator está errado; filosofia política no fim. O que não fechar aqui volta para a Larissa na terça seguinte.</span></span></div>
         <div class="slot estudo"><span class="hr">18:00<br>20:00</span><span><span class="ti">Estudo · Literatura e norma-padrão</span>
           <span class="do">Segundo bloco de literatura da semana (1h30) e <strong>30 min de norma-padrão e coesão</strong> — H27 está em 50% e H18 em 66%, e são as duas que aparecem em toda prova.</span></span></div>
       </div>
@@ -307,14 +335,14 @@ footer p{margin:0 0 8px; max-width:80ch}
       </div>
 
       <div class="day">
-        <h3>Quinta <span>Química e leitura</span></h3>
+        <h3>Quinta <span>Química e Linguagens</span></h3>
         <div class="slot aula"><span class="hr">08:00<br>09:30</span><span><span class="ti">QUÍ 1 · Lucas</span></span></div>
         <div class="slot plantao"><span class="hr">10:00<br>12:00</span><span><span class="ti">Plantão de Química<span class="badge b-plantao">prioridade 3</span></span>
           <span class="do"><strong>Estequiometria</strong> (q113 do 10º, 22% da rede) e <strong>funções orgânicas</strong> (q119). Química é a parte mais estável dela em Natureza: uma hora bem usada aqui resolve o que falta.</span></span></div>
         <div class="slot aula"><span class="hr">14:00<br>15:30</span><span><span class="ti">LING · Amanda</span>
-          <span class="do">Combinar com a Amanda <strong>uma lista quinzenal de literatura</strong> com correção comentada. É a substituta do plantão que não existe.</span></span></div>
-        <div class="slot plantao"><span class="hr">16:00<br>18:00</span><span><span class="ti">Plantão de Redação<span class="badge b-plantao">manter</span></span>
-          <span class="do">Fora do recorte dos simulados objetivos, mas é nota própria no ENEM. Manter uma redação por semana entregue e revisada aqui.</span></span></div>
+          <span class="do">Combinar com a Amanda <strong>uma lista quinzenal de literatura</strong> com correção comentada, para alimentar o plantão da tarde.</span></span></div>
+        <div class="slot plantao"><span class="hr">16:00<br>18:00</span><span><span class="ti">Plantão de Redação <em style="font-style:normal;color:var(--ink-3)">e de Linguagens</em><span class="badge b-plantao">prioridade 1</span></span>
+          <span class="do">O plantão também recebe dúvidas de Linguagens — e é por isso que ele vira prioridade na semana dela. <strong>Primeira hora:</strong> entregar e revisar a redação da semana. <strong>Segunda hora:</strong> as dúvidas de literatura e interpretação que sobraram dos blocos de segunda e terça — H16 (61%), H17 (65%) e H18 (66%), que são o maior buraco dela em todas as áreas.</span></span></div>
         <div class="slot estudo"><span class="hr">18:00<br>20:00</span><span><span class="ti">Estudo · Leitura longa cronometrada</span>
           <span class="do">Dois textos densos — crônica, artigo de opinião, fragmento literário — com <strong>resumo em três linhas</strong> e tempo marcado. O alvo é a resistência de leitura, que é o que quebra nos simulados longos (4º e 9º).</span></span></div>
       </div>
@@ -323,34 +351,36 @@ footer p{margin:0 0 8px; max-width:80ch}
         <h3>Sexta <span>Biologia e História</span></h3>
         <div class="slot aula"><span class="hr">08:00<br>09:30</span><span><span class="ti">BIO 1 · Carlos</span></span></div>
         <div class="slot plantao opc"><span class="hr">10:00<br>12:00</span><span><span class="ti">Plantão de Biologia<span class="badge b-opc">quinzenal</span></span>
-          <span class="do">Biologia é o componente mais forte dela em Natureza; o único bloco fraco é <strong>ecologia</strong> (10 erros). Ir a cada duas semanas, só com itens de ecologia e meio ambiente. Na semana alternada, usar a manhã para refazer a bateria de difíceis.</span></span></div>
+          <span class="do">Biologia é o componente mais forte dela em Natureza; o único bloco fraco é <strong>ecologia</strong> (10 erros). Ir a cada duas semanas, só com itens de ecologia e meio ambiente.</span></span></div>
         <div class="slot aula"><span class="hr">14:00<br>15:30</span><span><span class="ti">BIO 2 · Rangel</span></span></div>
         <div class="slot aula"><span class="hr">16:00<br>17:30</span><span><span class="ti">HIST · Juliana</span></span></div>
         <div class="slot opc"><span class="hr">18:00<br>20:00</span><span><span class="ti">Plantão de História<span class="badge b-opc">só antes de simulado</span></span>
-          <span class="do">História não está entre os conteúdos que ela mais erra em Humanas — o problema dela é sociologia e geografia. Depois de dez horas de escola, esse plantão rende pouco: ir só na semana que antecede um simulado. Nas demais, <strong>sexta à noite é descanso</strong>.</span></span></div>
+          <span class="do">História não está entre os conteúdos que ela mais erra em Humanas — o problema dela é sociologia e geografia. Depois de dez horas de escola, esse plantão rende pouco: ir só na véspera de simulado. Nas demais, <strong>sexta à noite é descanso</strong> — e é ela que prepara o sábado.</span></span></div>
       </div>
 
       <div class="day">
-        <h3>Sábado <span>Treino de corte</span></h3>
-        <div class="slot estudo"><span class="hr">manhã<br>2 h</span><span><span class="ti">Bateria de 20 itens difíceis, cronometrada</span>
-          <span class="do">Cinco itens de cada área, todos com taxa de acerto da rede <strong>abaixo de 45%</strong>. É o treino que ataca o teto comum às quatro áreas — e ele não funciona separado por matéria, porque o que falta é o procedimento de leitura do item difícil, não o conteúdo.</span></span></div>
-        <div class="slot estudo"><span class="hr">+30 min</span><span><span class="ti">Montar a lista da semana seguinte</span>
-          <span class="do">Separar, do painel, os itens a levar para cada plantão: Física na segunda, Geografia e Matemática na quarta, Química na quinta. <strong>Plantão sem lista pronta vira aula de revisão</strong>, e isso ela já tem.</span></span></div>
+        <h3>Sábado <span>Dia de simulado</span></h3>
+        <div class="slot opc"><span class="hr">dia<br>todo</span><span><span class="ti">Simulado<span class="badge b-opc">sem estudo</span></span>
+          <span class="do">Sábado fica livre de qualquer bloco de estudo. O simulado <em>é</em> o treino cronometrado da semana — inclusive da faixa difícil, que é o teto comum às quatro áreas.</span></span></div>
+        <div class="slot estudo"><span class="hr">na<br>prova</span><span><span class="ti">Dois protocolos para o dia</span>
+          <span class="do"><strong>1.</strong> Resolver as cinco questões de inglês em menos de 8 minutos — ela acerta 89% delas e isso libera fôlego para os textos longos do fim da prova. <strong>2.</strong> Guardar os últimos 8 minutos para reler o comando das questões marcadas como óbvias: são 32 erros evitáveis no ano, quase todos em itens que 80% ou mais da rede acertou.</span></span></div>
       </div>
 
       <div class="day">
         <h3>Domingo <span>Fechamento</span></h3>
-        <div class="slot estudo"><span class="hr">1 h 30</span><span><span class="ti">Revisão dos erros da semana</span>
-          <span class="do">Refazer <strong>sem consultar</strong> tudo o que errou na semana e explicar em voz alta por que cada distrator está errado. É o passo que converte item errado em item aprendido — e o único que não pode ser pulado.</span></span></div>
+        <div class="slot estudo"><span class="hr">1 h 30</span><span><span class="ti">Correção do simulado e dos erros da semana</span>
+          <span class="do">Refazer <strong>sem consultar</strong> o que errou no sábado e na semana, e explicar em voz alta por que cada distrator está errado. É o passo que converte item errado em item aprendido — e o único que não pode ser pulado. <em>Nas semanas sem simulado</em>, trocar por uma bateria de 20 itens difíceis das quatro áreas, todos com acerto da rede abaixo de 45%.</span></span></div>
+        <div class="slot estudo"><span class="hr">30 min</span><span><span class="ti">Montar a lista da semana seguinte</span>
+          <span class="do">Separar, do painel, os itens a levar para cada horário: Física na segunda, Sociologia na aula de terça, Geografia e Matemática na quarta, Química e Linguagens na quinta. <strong>Plantão sem lista pronta vira aula de revisão</strong>, e isso ela já tem.</span></span></div>
         <div class="slot opc"><span class="hr">resto<br>do dia</span><span><span class="ti">Descanso</span>
-          <span class="do">A grade dela já ocupa de 8h às 18h ou 20h de segunda a sexta. Domingo cheio é como se perde a quarta-feira seguinte.</span></span></div>
+          <span class="do">A grade dela já ocupa de 8h às 18h ou 20h de segunda a sexta, e o sábado é de prova. Domingo cheio é como se perde a quarta-feira seguinte.</span></span></div>
       </div>
     </div>
 
     <div class="insight" style="margin-top:20px">
       <div class="ins">
-        <h3>A regra de ouro dos plantões</h3>
-        <p>Ela chega com <strong>os itens que errou</strong>, não com dúvidas vagas. Os plantões de Física, Geografia, Matemática e Química cobrem, juntos, cerca de <strong>60% dos erros dela no ano</strong> — mas só se a conversa começar por uma questão concreta do simulado. O painel desta página serve exatamente para isso: a grade de itens de cada área mostra, questão a questão, o que levar.</p>
+        <h3>A regra de ouro dos horários com professor</h3>
+        <p>Ela chega com <strong>os itens que errou</strong>, não com dúvidas vagas. Somados, a janela de dúvidas na aula da Larissa e os plantões de Física, Geografia, Matemática, Química e Linguagens cobrem a quase totalidade dos conteúdos em que ela erra de forma recorrente — mas só se a conversa começar por uma questão concreta do simulado. A grade de itens de cada área, nesta página, mostra questão a questão o que levar; a lista se monta no domingo.</p>
       </div>
       <div class="ins">
         <h3>O que não entrar na rotina</h3>
@@ -358,13 +388,80 @@ footer p{margin:0 0 8px; max-width:80ch}
       </div>
       <div class="ins">
         <h3>Onde ela vai sentir o aperto</h3>
-        <p>Quarta é o dia mais pesado: aula das 8h, dois plantões e aula de Matemática no meio, terminando às 18h. Se algum dia da semana falhar, que seja o plantão de História na sexta — nunca o de Matemática na quarta nem o de Física na segunda, que são os dois de maior retorno.</p>
+        <p>Quarta e quinta são os dias pesados: quarta vai das 8h às 18h com dois plantões; quinta vai das 8h às 20h. Se alguma coisa tiver de cair numa semana ruim, que seja o plantão de História na sexta ou o de Biologia — nunca Matemática na quarta, Física na segunda ou Linguagens na quinta, que são os três de maior retorno.</p>
       </div>
       <div class="ins cool">
         <h3>A meta dos próximos 60 dias</h3>
         <p>Subir a faixa difícil de Linguagens e Humanas para a média da rede (de 27% e 32% para cerca de 37%) e manter o 2º dia onde está — em Natureza e Matemática ela já passou da rede nessa faixa. Isso vale aproximadamente <strong>4 a 5 acertos por simulado completo</strong> sem tocar em mais nada.</p>
       </div>
     </div>
+  </section>
+
+  <section id="cronograma">
+    <div class="sechead"><h2>O plano até 31 de outubro</h2><span class="note">quatro semanas, de 6 a 31/10/2026</span></div>
+    <p class="lede">Quatro semanas até 31 de outubro. A segunda-feira 12/10 é feriado nacional, então a semana 2 perde o plantão de Física — e o bloco é remanejado para a sexta. Cada semana fecha com um checkpoint verificável: se ela não passar, o conteúdo volta na semana seguinte em vez de avançar.</p>
+    <div class="semgrid">
+      <div class="day sem">
+        <h3>Semana 1 <span>6 a 11/10</span></h3>
+        <div class="foco">Começa numa <b>terça</b>, sem o plantão de Física de segunda. Foco: <b>abrir literatura</b> — o maior buraco dela — e levar os clássicos da sociologia para a aula da Larissa.</div>
+        <ul>
+          <li><b>Ter 6 · aula da Larissa:</b> Durkheim, Weber e Marx (8 erros no ano nos clássicos).</li>
+          <li><b>Ter 6 · tarde e noite:</b> 12 itens de clássicos e indústria cultural; depois, primeira escola literária.</li>
+          <li><b>Qua 7 · plantão de Geografia:</b> indústria, energia e agropecuária (10 erros).</li>
+          <li><b>Qua 7 · plantão de Matemática:</b> porcentagem — q142, q161 e q172 do 10º.</li>
+          <li><b>Qui 8 · plantão de Linguagens:</b> H16, procedimentos de construção do texto literário.</li>
+          <li><b>Sex 9 · manhã:</b> repõe a Física da segunda — óptica (q105, q107, q130) e eletrodinâmica.</li>
+          <li><b>Sáb 10:</b> simulado.</li>
+        </ul>
+        <div class="chk"><b>Checkpoint</b>Primeira bateria de 15 itens difíceis de Linguagens registrada — é a linha de base contra a qual as semanas 3 e 4 serão medidas.</div>
+      </div>
+
+      <div class="day sem">
+        <h3>Semana 2 <span>12 a 18/10</span></h3>
+        <div class="foco">Foco: <b>literatura em bloco e Física concentrada</b>, já que a semana abre com feriado e a carga de aula é menor.<span class="aviso">12/10, segunda — feriado nacional. Sem aula e sem plantão de Física.</span></div>
+        <ul>
+          <li><b>Ter 13 · aula da Larissa:</b> indústria cultural e sociologia da cultura (9 erros).</li>
+          <li><b>Ter 13 · noite:</b> segunda escola literária e 30 min de norma-padrão (H27, 50%).</li>
+          <li><b>Qua 14 · plantão de Geografia:</b> geomorfologia, solos e geologia (8 erros).</li>
+          <li><b>Qua 14 · plantão de Matemática:</b> matemática financeira — juros compostos (q165) e acréscimos (q150).</li>
+          <li><b>Qui 15 · plantão de Linguagens:</b> H18, progressão temática e coesão. <em>Confirmar se há aula no Dia do Professor.</em></li>
+          <li><b>Sex 16 · manhã:</b> bloco longo de Física no lugar do plantão perdido — eletrodinâmica e óptica.</li>
+          <li><b>Sáb 17:</b> simulado.</li>
+        </ul>
+        <div class="chk"><b>Checkpoint</b>Refazer, sem consulta, os dez erros de Natureza do 10º simulado. Meta: no mínimo sete corretos.</div>
+      </div>
+
+      <div class="day sem">
+        <h3>Semana 3 <span>19 a 25/10</span></h3>
+        <div class="foco">Semana cheia, sem feriado. Foco: <b>a faixa difícil de Linguagens e Humanas</b> — 27% e 32%, as duas únicas faixas dela abaixo da rede.</div>
+        <ul>
+          <li><b>Seg 19 · plantão de Física:</b> cinemática e termologia, que somam 16 erros no ano.</li>
+          <li><b>Seg 19 · noite:</b> terceira e quarta escolas literárias.</li>
+          <li><b>Ter 20 · aula da Larissa:</b> filosofia política e teoria do Estado (5 erros).</li>
+          <li><b>Qua 21 · plantão de Matemática:</b> função do 2º grau e geometria plana.</li>
+          <li><b>Qui 22 · plantão de Linguagens:</b> H17 — valores e patrimônio literário.</li>
+          <li><b>Qui 22 · noite:</b> leitura longa cronometrada, dois textos densos.</li>
+          <li><b>Sáb 24:</b> simulado.</li>
+        </ul>
+        <div class="chk"><b>Checkpoint</b>Segunda bateria de 15 itens difíceis de LC e 15 de CH. Meta: superar em 10 pontos o resultado da semana 1.</div>
+      </div>
+
+      <div class="day sem">
+        <h3>Semana 4 <span>26 a 31/10</span></h3>
+        <div class="foco">Fechamento do mês. Foco: <b>consolidar e medir</b>. Nada de conteúdo novo — tudo o que entra já passou por um plantão nas três semanas anteriores.</div>
+        <ul>
+          <li><b>Seg 26 · noite:</b> revisão fechada de literatura — as quatro escolas do mês em bateria única.</li>
+          <li><b>Ter 27 · aula da Larissa:</b> o que ficou pendente dos clássicos e da indústria cultural.</li>
+          <li><b>Qua 28 · plantão de Geografia:</b> revisão — confirmar se o gargalo fechou.</li>
+          <li><b>Qua 28 · plantão de Matemática:</b> revisão de porcentagem e financeira.</li>
+          <li><b>Qui 29 · plantão de Linguagens:</b> o que sobrou de literatura e norma-padrão.</li>
+          <li><b>Sex 30:</b> descanso. Sábado é de prova.</li>
+          <li><b>Sáb 31:</b> simulado de fechamento do mês.</li>
+        </ul>
+        <div class="chk"><b>Checkpoint do mês</b>Comparar 31/10 com o 10º simulado. Metas: <b>faixa difícil de LC e CH acima de 37%</b> (a média da rede) e <b>no máximo dois erros evitáveis no 1º dia</b>.</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-3);margin-top:14px;max-width:80ch">O esqueleto da semana é sempre o mesmo — o da seção anterior. O que muda a cada semana é <em>o que entra em cada bloco</em>. Feriados e pontes estão marcados; o <strong>Dia do Professor, 15/10 (quinta)</strong>, não é feriado nacional, mas convém confirmar com a coordenação se haverá aula.</p>
   </section>
 
   <footer>
