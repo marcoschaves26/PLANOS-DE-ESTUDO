@@ -1,0 +1,296 @@
+<!doctype html><html lang="pt-BR"><head><meta name="robots" content="noindex,nofollow"><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body><title>Semana Eduarda</title><style>
+:root{
+  --bg:#faf9f5; --surf:#ffffff; --surf-2:#f3f1ea; --line:#e3e0d6; --line-2:#cfcabb;
+  --ink:#1b1a17; --ink-2:#55514a; --ink-3:#86806f;
+  --accent:#9a3b12; --accent-soft:#f6e7dd; --accent-line:#e0b79e;
+  --ok:#2f6b4f; --ok-soft:#e4efe8;
+  --warn:#8a6a12; --warn-soft:#f6eed6;
+  --mute-soft:#efedea;
+  --rad:14px; --sh:0 1px 2px rgba(27,26,23,.05), 0 6px 20px rgba(27,26,23,.05);
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --bg:#14130f; --surf:#1d1c17; --surf-2:#24231d; --line:#312f27; --line-2:#433f35;
+    --ink:#f2efe6; --ink-2:#bdb7a8; --ink-3:#8b8577;
+    --accent:#f0a177; --accent-soft:#36211a; --accent-line:#5e3a28;
+    --ok:#85c9a4; --ok-soft:#1b2a22;
+    --warn:#dcb960; --warn-soft:#2b2516;
+    --mute-soft:#24231d;
+    --sh:0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+  }
+  @media (prefers-color-scheme: dark){ .logo{filter:invert(1)} }
+}
+:root[data-theme="dark"] .logo{filter:invert(1)}
+:root[data-theme="dark"]{
+  --bg:#14130f; --surf:#1d1c17; --surf-2:#24231d; --line:#312f27; --line-2:#433f35;
+  --ink:#f2efe6; --ink-2:#bdb7a8; --ink-3:#8b8577;
+  --accent:#f0a177; --accent-soft:#36211a; --accent-line:#5e3a28;
+  --ok:#85c9a4; --ok-soft:#1b2a22;
+  --warn:#dcb960; --warn-soft:#2b2516;
+  --mute-soft:#24231d;
+  --sh:0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.55 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:860px; margin:0 auto; padding:0 16px}
+
+/* ---------- masthead ---------- */
+.mast{background:var(--surf); border-bottom:1px solid var(--line)}
+.mastrow{display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:14px 24px; padding:26px 0 20px}
+.mast .eyebrow{margin:0 0 6px; font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); font-weight:650}
+.mast h1{margin:0; font-size:clamp(25px,4.6vw,38px); line-height:1.12; letter-spacing:-.02em; font-weight:700; overflow-wrap:break-word}
+.mast .kicker{margin:10px 0 0; font-size:17px; color:var(--ink-2); max-width:58ch}
+.logo{width:148px; height:auto; opacity:.92; justify-self:end; margin-top:4px}
+@media (max-width:640px){
+  .mastrow{grid-template-columns:1fr; gap:0}
+  .logo{order:-1; justify-self:start; width:108px; margin:0 0 14px}
+}
+
+.rule{display:flex; gap:10px; align-items:flex-start; margin:0 0 26px;
+  background:var(--accent-soft); border:1px solid var(--accent-line); border-radius:var(--rad); padding:14px 16px}
+.rule b{display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:3px}
+.rule p{margin:0; font-size:16px; color:var(--ink)}
+
+.note{margin:-14px 0 26px; padding:11px 14px; background:var(--surf-2); border:1px solid var(--line);
+  border-radius:11px; font-size:14px; color:var(--ink-2)}
+.note b{color:var(--ink); font-weight:650}
+
+/* ---------- sections ---------- */
+section{padding:34px 0 6px}
+h2{margin:0 0 4px; font-size:clamp(20px,3.4vw,26px); letter-spacing:-.015em; line-height:1.2}
+.lede{margin:0 0 18px; color:var(--ink-2); font-size:16px; max-width:62ch}
+.num{display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%;
+  background:var(--accent); color:var(--bg); font-size:13px; font-weight:700; margin-right:9px; vertical-align:2px}
+:root[data-theme="dark"] .num, :root:not([data-theme="light"]) .num{color:#14130f}
+
+/* ---------- generic card ---------- */
+.card{background:var(--surf); border:1px solid var(--line); border-radius:var(--rad); padding:16px 18px; box-shadow:var(--sh)}
+.card h3{margin:0 0 6px; font-size:17px; letter-spacing:-.01em}
+.card p{margin:0 0 8px; color:var(--ink-2); font-size:15px}
+.card p:last-child{margin-bottom:0}
+.stack{display:grid; gap:12px}
+.two{display:grid; gap:12px; grid-template-columns:1fr 1fr}
+@media (max-width:640px){ .two{grid-template-columns:1fr} }
+
+/* ---------- tags ---------- */
+.tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  padding:3px 8px; border-radius:999px; vertical-align:2px; margin-left:7px}
+.t-must{background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent-line)}
+.t-ok{background:var(--ok-soft); color:var(--ok)}
+.t-opt{background:var(--warn-soft); color:var(--warn)}
+.t-off{background:var(--mute-soft); color:var(--ink-3)}
+
+/* ---------- time rows ---------- */
+.row{display:flex; gap:12px; padding:10px 0; border-top:1px dashed var(--line)}
+.row:first-child{border-top:0}
+.row .t{flex:none; width:92px; font-variant-numeric:tabular-nums; font-size:13px; color:var(--ink-3); font-weight:600; line-height:1.35; padding-top:2px}
+.row .c{flex:1 1 auto; min-width:0}
+.row .c b{display:block; font-size:15px; font-weight:650}
+.row .c span{display:block; font-size:14px; color:var(--ink-2); margin-top:3px}
+.row.off .c b{color:var(--ink-3); font-weight:500}
+@media (max-width:520px){
+  .row{gap:10px}
+  .row .t{width:62px; font-size:12px}
+}
+
+/* ---------- day block ---------- */
+.day{background:var(--surf); border:1px solid var(--line); border-radius:var(--rad); box-shadow:var(--sh); overflow:hidden}
+.day > header{display:flex; align-items:baseline; gap:10px; padding:12px 18px; background:var(--surf-2); border-bottom:1px solid var(--line); flex-wrap:wrap}
+.day > header h3{margin:0; font-size:16px; letter-spacing:-.01em}
+.day > header em{font-style:normal; font-size:13px; color:var(--ink-3)}
+.day .body{padding:6px 18px 14px}
+
+/* ---------- checklist ---------- */
+ul.check{list-style:none; margin:0; padding:0}
+ul.check li{position:relative; padding:7px 0 7px 26px; font-size:15px; color:var(--ink-2); border-top:1px dashed var(--line)}
+ul.check li:first-child{border-top:0}
+ul.check li::before{content:""; position:absolute; left:0; top:12px; width:13px; height:13px; border:1.5px solid var(--line-2); border-radius:3.5px}
+ul.check li b{color:var(--ink); font-weight:650}
+
+/* ---------- steps (cycle) ---------- */
+.steps{counter-reset:s; display:grid; gap:10px}
+.step{counter-increment:s; position:relative; background:var(--surf); border:1px solid var(--line);
+  border-left:3px solid var(--accent); border-radius:var(--rad); padding:14px 18px 14px 56px; box-shadow:var(--sh)}
+.step::before{content:counter(s); position:absolute; left:17px; top:14px; width:26px; height:26px; border-radius:50%;
+  background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent-line);
+  display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700}
+.step h3{margin:0 0 4px; font-size:16px}
+.step h3 small{font-weight:600; color:var(--ink-3); font-size:13px; margin-left:8px}
+.step p{margin:0; font-size:15px; color:var(--ink-2)}
+
+/* ---------- strip (compact week) ---------- */
+.strip{display:grid; gap:8px; grid-template-columns:repeat(5,1fr)}
+@media (max-width:700px){ .strip{grid-template-columns:1fr 1fr} }
+@media (max-width:400px){ .strip{grid-template-columns:1fr} }
+.strip div{background:var(--surf); border:1px solid var(--line); border-radius:11px; padding:11px 12px; box-shadow:var(--sh)}
+.strip b{display:block; font-size:12px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); margin-bottom:5px}
+.strip span{display:block; font-size:14px; color:var(--ink); line-height:1.4}
+.strip em{display:block; font-style:normal; font-size:13px; color:var(--ink-3); margin-top:4px}
+
+/* ---------- weekend ---------- */
+.wknd{display:grid; gap:12px; grid-template-columns:1.15fr 1fr}
+@media (max-width:640px){ .wknd{grid-template-columns:1fr} }
+
+/* ---------- footer ---------- */
+footer{margin-top:44px; border-top:1px solid var(--line); background:var(--surf)}
+footer .wrap{padding-top:20px; padding-bottom:30px}
+footer p{margin:0 0 5px; font-size:13px; color:var(--ink-3)}
+
+@media print{
+  body{background:#fff}
+  .card,.day,.step,.strip div{box-shadow:none}
+  section{page-break-inside:avoid}
+}
+</style>
+<header class="mast"><div class="wrap">
+  <div class="mastrow">
+    <div>
+      <p class="eyebrow">Plano de estudo · 6 a 31 de outubro</p>
+      <h1>Eduarda Ferrer Javaroni</h1>
+      <p class="kicker">Seus buracos de conteúdo são poucos e bem localizados — não cabe uma semana cheia para eles. Por isso sua semana não se repete: ela alterna. Duas semanas diferentes, que se revezam até 31 de outubro.</p>
+    </div>
+    <img class="logo" src="data:image/png;base64,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" alt="Curso Loghus" width="420" height="101">
+  </div>
+</div></header>
+<main class="wrap">
+  <div class="rule" style="margin-top:26px"><div><b>O combinado que vale mais que qualquer bloco de estudo</b><p>Estar na sala no sábado. Você fez 24 das 36 provas do ano e faltou a quatro das nove aplicações do 2º dia — justamente onde você tem o melhor desempenho do grupo inteiro. Cada falta custa duas coisas: o treino de resistência e a possibilidade de saber se você está subindo. Nenhum bloco desta página vale o que vale a sua presença.</p></div></div>
+  <p class="note"><b>O calendário de outubro.</b> As duas primeiras semanas não têm segunda-feira: o plano começa na terça 06/10 e 12/10 é feriado. Em cada uma delas, o bloco de segunda vai para a sexta 18:00 — literatura na semana A, Química na semana B.</p>
+
+<section>
+  <h2><span class="num">1</span>Como a alternância funciona</h2>
+  <p class="lede">Quatro semanas até 31 de outubro: A, B, A, B. A diferença está só nos blocos de estudo sozinha e
+  em quais plantões você frequenta — as aulas são as mesmas nas duas.</p>
+  <div class="two">
+    <div class="card">
+      <h3>Semana A <span class="tag t-must">06 a 10/10 · 19 a 24/10</span></h3>
+      <p>Literatura, pesado. É o seu maior buraco e o único lugar em Linguagens onde você perde ponto de forma
+      sistemática. Semana A é quase inteira dela.</p>
+    </div>
+    <div class="card">
+      <h3>Semana B <span class="tag t-must">12 a 17/10 · 26 a 31/10</span></h3>
+      <p>Norma-padrão, geografia econômica e Química. Três alvos pequenos e precisos, um por dia.
+      <em>Atenção:</em> 12/10 é feriado, então a primeira semana B perde a segunda — e o bloco de Química
+      vai para a sexta 18:00.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">2</span>Semana A — literatura</h2>
+  <p class="lede">Duas escolas literárias por semana, sempre com o texto do autor na mão. Nunca resumo de escola
+  sem texto: a questão do ENEM cobra o texto.</p>
+  <div class="day">
+    <header><h3>Semana A</h3><em>06 a 10/10 e 19 a 24/10 — as aulas seguem normais; aqui está só o que você decide</em></header>
+    <div class="body">
+      <div class="row">
+        <div class="t">Seg<br>17:30</div>
+        <div class="c"><b>Literatura — escola 1</b>
+          <span>1h de leitura e análise do texto · 1h de questões da escola · 30 min de ficha-resumo escrita por você.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Ter<br>16:00</div>
+        <div class="c"><b>Literatura — escola 2</b>
+          <span>Mesma divisão. Ao fim, escreva três linhas comparando as duas escolas da semana — é assim que a prova cobra.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Qui<br>16:00</div>
+        <div class="c"><b>Plantão de Redação e Linguagens</b>
+          <span>Leve as questões de literatura que ficaram em aberto nos dois blocos. Meia hora de redação, o resto de literatura.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Qui<br>18:00</div>
+        <div class="c"><b>Itens difíceis de Linguagens</b>
+          <span>Quinze itens da faixa difícil de LC. É a única faixa sua, entre as oito, que não se descola da rede —
+          e como você já resolve o item difícil melhor que qualquer colega nas outras três áreas, aqui é só exposição.</span></div>
+      </div>
+      <div class="row off">
+        <div class="t">Qua e Sex</div>
+        <div class="c"><b>Sem bloco marcado</b><span>Semana A é curta de propósito. Use para descansar ou adiantar leitura.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">3</span>Semana B — os três alvos pequenos</h2>
+  <p class="lede">Um alvo por dia, nenhum deles grande. Semana B existe para que eles não se acumulem.</p>
+  <div class="day">
+    <header><h3>Semana B</h3><em>12 a 17/10 e 26 a 31/10 — na primeira, 12/10 é feriado e o bloco de segunda vai para a sexta</em></header>
+    <div class="body">
+      <div class="row">
+        <div class="t">Seg<br>17:30</div>
+        <div class="c"><b>Química</b>
+          <span>Apareceu pela primeira vez como ponto fraco no último simulado. Trate agora, enquanto é pequeno.
+          Se a segunda cair em feriado, este bloco vai para sexta 18:00.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Ter<br>16:00</div>
+        <div class="c"><b>Norma-padrão</b>
+          <span>Regência, concordância, crase e pontuação — sempre dentro de um texto, nunca em frase solta.
+          É o seu pior número em Linguagens depois de literatura.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Qua<br>10:00</div>
+        <div class="c"><b>Plantão de Geografia</b>
+          <span>Leve só <strong>geografia econômica</strong> — indústria, energia e agropecuária. Esse assunto sozinho
+          responde por mais erros seus em Humanas que qualquer outro, com o dobro do segundo colocado.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Qui<br>10:00</div>
+        <div class="c"><b>Plantão de Química</b>
+          <span>Só na semana B, e só com as dúvidas do bloco de segunda já separadas.</span></div>
+      </div>
+      <div class="row">
+        <div class="t">Qui<br>16:00</div>
+        <div class="c"><b>Plantão de Redação e Linguagens</b>
+          <span>Em semana B, a redação leva o tempo todo.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">4</span>O que vale nas duas semanas</h2>
+  <ul class="check">
+    <li><b>Terça 08:00, aula da Prof. Larissa</b> — Sociologia e Filosofia não estão entre o que você mais erra.
+    Use a janela em que a turma copia só para o que ficou pendente da aula do dia. Não precisa de lista preparada.</li>
+    <li><b>Plantão de Física, segunda 10:00</b> — de quinze em quinze dias, na semana A. Física quase não aparece nos
+    seus erros. Na semana alternada, use a manhã para literatura.</li>
+    <li><b>Plantão de Biologia, sexta 10:00</b> — opcional, só com dúvida da aula.</li>
+    <li><b>Inglês</b> — fora do plano. Você acertou todas as questões de inglês do ano. Não há o que treinar.</li>
+    <li><b>Item fácil</b> — fora do plano também. Você acerta 100% deles em Natureza e Matemática.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">5</span>Sábado e domingo</h2>
+  <div class="wknd">
+    <div class="card">
+      <h3>Sábado — simulado<span class="tag t-must">a prioridade número 1</span></h3>
+      <p>É o item mais importante desta página inteira, e por isso aparece duas vezes nela.</p>
+      <p>Você é a melhor do grupo na questão difícil — acerta três de cada quatro itens de Natureza que a maioria erra.
+      Esse resultado só conta se estiver registrado. <strong>Faça os dois dias.</strong> Se houver conflito de agenda
+      num sábado, avise na semana anterior para remarcar o que der.</p>
+    </div>
+    <div class="card">
+      <h3>Domingo — 2 horas</h3>
+      <p><strong>1h30 de correção</strong>, com uma pergunta fixa em cada erro de Linguagens: foi literatura,
+      foi norma-padrão, ou foi outra coisa? Se aparecer muita "outra coisa", me avise — o plano muda.</p>
+      <p><strong>30 min</strong> para separar as questões dos plantões da semana seguinte e conferir se a próxima
+      é semana A ou B.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">
+  <p><strong>Curso Loghus &middot; unidade Barra</strong> &mdash; plano individual, válido de 6 a 31 de outubro de 2026.</p>
+  <p>Montado a partir do seu desempenho item a item nos simulados de 2026, cruzado com a ficha de conteúdos,
+  competências e habilidades de cada prova. Revisão ao fim de outubro.</p>
+  <p>Página de uso interno. Não compartilhe o link fora do curso.</p>
+</div></footer>
